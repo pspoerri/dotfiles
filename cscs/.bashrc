@@ -4,13 +4,18 @@
 if [[ "$(hostname)" = "kesch"* ]] || [[ "$(hostname)" = "escha"* ]] ; then
     export SCRATCH=/scratch/$(whoami)
     . /etc/bash_completion.d/git
-    . /users/spoerrip/install/kesch/activate
+    module load Python
+    module load git
+    module load tmux
+    export PYTHONPATH=$PYTHONPATH:/project/c01/install/kesch/stella/trunk/release_double/python/
+fi
+if [[ "$(hostname)" = "lema"* ]] ; then 
     module load git
 fi
 
 alias tmux_up_DISPLAY='export $(tmux show-environment | grep "^DISPLAY")'
 alias mav="module av 2>&1 | grep -i "
-
+alias qu="squeue | grep spoerrip"
 export TERM=xterm-256color
 export EDITOR=/usr/bin/vim
 
