@@ -7,6 +7,7 @@ if [[ "$(hostname)" = "kesch"* ]] || [[ "$(hostname)" = "escha"* ]] ; then
     module load Python
     module load git
     module load tmux
+    export PATH=~/.local/bin/:$PATH
     export PYTHONPATH=$PYTHONPATH:/project/c01/install/kesch/stella/trunk/release_double/python/
 fi
 if [[ "$(hostname)" = "lema"* ]] ; then 
