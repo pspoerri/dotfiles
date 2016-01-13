@@ -15,7 +15,7 @@ if [[ "$(hostname)" = "lema"* ]] ; then
 fi
 
 alias tmux_up_DISPLAY='export $(tmux show-environment | grep "^DISPLAY")'
-alias mav="module av 2>&1 | grep -i "
+alias mav="module av -t 2>&1 | grep -i "
 alias qu="squeue | grep spoerrip"
 export TERM=xterm-256color
 export EDITOR=/usr/bin/vim
