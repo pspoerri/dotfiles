@@ -1,6 +1,9 @@
 # Bashrc for cscs system
 # Pascal's kesch and escha hacks
-
+if [[ "$(hostname)" = "dom"* ]] ; then
+    module use /apps/common/UES/jenkins/RH6.7/easybuild/modules/all
+    module load tmux
+fi
 if [[ "$(hostname)" = "kesch"* ]] || [[ "$(hostname)" = "escha"* ]] ; then
     export SCRATCH=/scratch/$(whoami)
     . /etc/bash_completion.d/git
@@ -10,10 +13,11 @@ if [[ "$(hostname)" = "kesch"* ]] || [[ "$(hostname)" = "escha"* ]] ; then
     export PATH=/oprusers/owm/bin:$PATH
     export PATH=~/.local/bin/:$PATH
     #export PYTHONPATH=$PYTHONPATH:/project/c01/install/kesch/stella/trunk/release_double/python/
+    export PYTHONPATH=$PYTHONPATH:~/.local/lib/python3.5/site-packages/
     export PYTHONPATH=$PYTHONPATH:/project/c01/install/kesch/serialbox/gnu/python
 fi
-if [[ "$(hostname)" = "lema"* ]] ; then 
-    module load git
+if [[ "$(hostname)" = "daint"* ]] ; then 
+    . /etc/bash_completion.d/git.sh
 fi
 
 alias tmux_up_DISPLAY='export $(tmux show-environment | grep "^DISPLAY")'
@@ -37,4 +41,5 @@ else
 fi
 
 test -s ~/.alias && . ~/.alias || true
-test -s /etc/bashrc && . /etc/bashrc
+
+
