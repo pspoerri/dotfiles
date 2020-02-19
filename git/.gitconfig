@@ -1,6 +1,6 @@
 [user]
-  name = Pascal Spörri
-  email = spoerri@oberon.ch
+    name = Pascal Spörri
+    email = pspoerri@meteomatics.com
  
 [alias]
   co = checkout
