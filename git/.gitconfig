@@ -1,7 +1,7 @@
 [user]
-	name = Pascal Spörri
-	email = pspoerri@meteomatics.com
- 
+    name = Pascal Spörri
+    email = git@pascalspoerri.ch
+
 [alias]
     bb = rev-parse --abbrev-ref HEAD
     co = checkout
@@ -11,12 +11,6 @@
     lg = !"git lg1"
 
 [core]
-	excludesfile = /Users/pascal/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    excludesfile = /Users/pascal/.gitignore_global
 [commit]
-	template = /Users/pascal/.stCommitMsg
+    template = /Users/pascal/.stCommitMsg
