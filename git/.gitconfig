@@ -12,5 +12,3 @@
 
 [core]
     excludesfile = /Users/pascal/.gitignore_global
-[commit]
-    template = /Users/pascal/.stCommitMsg
