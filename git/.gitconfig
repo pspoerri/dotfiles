@@ -1,6 +1,6 @@
 [user]
-    name = Pascal Spörri
-    email = git@pascalspoerri.ch
+	name = Pascal Spörri
+	email = git@pascalspoerri.ch
 
 [alias]
     bb = rev-parse --abbrev-ref HEAD
