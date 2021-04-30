@@ -10,3 +10,9 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+bindkey  "^[[H"   beginning-of-line
+bindkey "^A"      beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^E"     end-of-line
+bindkey  "^[[3~"  delete-char
+
